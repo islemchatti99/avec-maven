@@ -28,6 +28,7 @@ public class CallRestWebService {
 		HttpGet request = new HttpGet(endpoint);
 		String ip = "not found";
 		try {
+			// second commit //
 			HttpResponse response = client.execute(request);
 			String jsonResponse = EntityUtils.toString(response.getEntity());
 			System.out.println("Response as String : " + jsonResponse);
