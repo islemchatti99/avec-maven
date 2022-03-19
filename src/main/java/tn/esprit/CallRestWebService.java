@@ -26,7 +26,7 @@ public class CallRestWebService {
 	public static void main(String[] args) {
 		HttpClient client = new DefaultHttpClient();
 		HttpGet request = new HttpGet(endpoint);
-		String adresseip2 = "not found";
+		String adresseip4 = "not found";
 		try {
 			// second commit //
 			// WS-Mangement commit //
@@ -36,8 +36,8 @@ public class CallRestWebService {
 			JSONObject responseObj = new JSONObject(jsonResponse);
 
 			//ip = responseObj.getString("origin");
-			adresseip2 = responseObj.getString("query");
-			System.out.println("ip : " + adresseip2); 
+			adresseip4 = responseObj.getString("query");
+			System.out.println("ip : " + adresseip4); 
 
 		} catch (IOException e) {
 			e.printStackTrace();
