@@ -26,18 +26,28 @@ public class CallRestWebService {
 	public static void main(String[] args) {
 		HttpClient client = new DefaultHttpClient();
 		HttpGet request = new HttpGet(endpoint);
+<<<<<<< HEAD
 		String adresseip4 = "not found";
+=======
+		String adresseip3 = "not found";
+>>>>>>> refs/heads/maBranche
 		try {
 			// second commit //
 			// WS-Mangement commit //
+			
 			HttpResponse response = client.execute(request);
 			String jsonResponse = EntityUtils.toString(response.getEntity());
 			System.out.println("Response as String : " + jsonResponse);
 			JSONObject responseObj = new JSONObject(jsonResponse);
 
 			//ip = responseObj.getString("origin");
+<<<<<<< HEAD
 			adresseip4 = responseObj.getString("query");
 			System.out.println("ip : " + adresseip4); 
+=======
+			adresseip3 = responseObj.getString("query");
+			System.out.println("ip : " + adresseip3); 
+>>>>>>> refs/heads/maBranche
 
 		} catch (IOException e) {
 			e.printStackTrace();
